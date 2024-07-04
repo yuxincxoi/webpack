@@ -1,2 +1,7 @@
-const root = document.getElementById('root');
-console.log(root);
+const root = document.getElementById('root')!;
+
+root.innerHTML = `
+  <ul>
+    <li>test</li>
+  </ul>
+`;
