@@ -1,7 +1,7 @@
 const root = document.getElementById('root') as HTMLDivElement;
 
 const anchorTags = (href : string, textNode : string) : string => {
-  let result = `<a href="${href}">${textNode}</a>`
+  let result = `<a href="#${href}">${textNode}</a>`
   return result;
 }
 
@@ -39,3 +39,7 @@ root.innerHTML = `
     <li>${totalElement(basicData)}</li>
   </ul>
 `;
+
+// * --------------------------------- 
+// * HTML을 대신해서 만든 HTML 작성 코드
+// * React, CSR

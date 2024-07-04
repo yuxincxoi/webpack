@@ -2,7 +2,7 @@
 
 var root = document.getElementById('root');
 var anchorTags = function anchorTags(href, textNode) {
-  var result = "<a href=\"".concat(href, "\">").concat(textNode, "</a>");
+  var result = "<a href=\"#".concat(href, "\">").concat(textNode, "</a>");
   return result;
 };
 var liTags = function liTags(children) {
@@ -25,3 +25,7 @@ var totalElement = function totalElement(obj) {
   return result;
 };
 root.innerHTML = "\n  <ul>\n    <li>".concat(totalElement(basicData), "</li>\n  </ul>\n");
+
+// * --------------------------------- 
+// * HTML을 대신해서 만든 HTML 작성 코드
+// * React, CSR
