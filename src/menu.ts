@@ -1,2 +1,2 @@
-const a = "test";
-console.log(a);
+const root = document.getElementById('root');
+console.log(root);

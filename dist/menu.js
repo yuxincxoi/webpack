@@ -1,4 +1,4 @@
 "use strict";
 
-var a = "test";
-console.log(a);
+var root = document.getElementById('root');
+console.log(root);
