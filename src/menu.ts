@@ -1,4 +1,4 @@
-const root = document.getElementById('root')!;
+const root = document.getElementById('root') as HTMLDivElement;
 
 const anchorTags = (href : string, textNode : string) : string => {
   let result = `<a href="${href}">${textNode}</a>`
