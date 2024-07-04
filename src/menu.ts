@@ -10,6 +10,13 @@ const liTags = (children : string) : string => {
   return result;
 }
 
+const basicData = {
+  jaemin : "재민",
+  hoyoung : "호영",
+  yujin : "유진",
+  jiyoon : "지윤"
+}
+
 const totalElement = () => {
   let result = liTags(anchorTags("#yujin", "유진"));
   return result;
