@@ -25,7 +25,12 @@ const basicData : BasicData = {
 }
 
 const totalElement = (obj : BasicData) : string => {
-  let result = liTags(anchorTags(`#${obj.jaemin}`, obj.jaemin));
+  let result = '';
+  for (let key in obj) {
+    // TypeScript가 key가 BasicData의 키인 것을 알게 함
+    const value = obj[key as keyof BasicData];
+    result += liTags(anchorTags(key, value));
+  }
   return result;
 }
 
