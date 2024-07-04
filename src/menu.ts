@@ -10,8 +10,13 @@ const liTags = (children : string) : string => {
   return result;
 }
 
+const totalElement = () => {
+  let result = liTags(anchorTags("#yujin", "유진"));
+  return result;
+}
+
 root.innerHTML = `
   <ul>
-    <li>${liTags(anchorTags("#yujin", "유진"))}</li>
+    <li>${totalElement()}</li>
   </ul>
 `;
