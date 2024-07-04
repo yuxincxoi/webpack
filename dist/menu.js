@@ -32,3 +32,6 @@ root.innerHTML = "\n  <ul>\n    <li>".concat(totalElement(basicData), "</li>\n  
 
 var mainTarget = document.getElementById("main-target");
 console.log(window.location.hash);
+window.addEventListener("hashchange", function () {
+  mainTarget.innerHTML = basicData.jaemin;
+});

@@ -47,3 +47,7 @@ root.innerHTML = `
 
 const mainTarget = document.getElementById("main-target")!;
 console.log(window.location.hash);
+
+window.addEventListener("hashchange", () => {
+  mainTarget.innerHTML = basicData.jaemin;
+})
