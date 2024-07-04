@@ -44,3 +44,6 @@ root.innerHTML = `
 // * --------------------------------- 
 // * HTML을 대신해서 만든 HTML 작성 코드
 // * React, CSR
+
+const mainTarget = document.getElementById("main-target")!;
+console.log(window.location.hash);
