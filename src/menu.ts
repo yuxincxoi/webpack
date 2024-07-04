@@ -38,6 +38,7 @@ root.innerHTML = `
   <ul>
     <li>${totalElement(basicData)}</li>
   </ul>
+  <main id="main-target"></main>
 `;
 
 // * --------------------------------- 
