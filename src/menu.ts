@@ -5,13 +5,13 @@ const anchorTags = () => {
   return result;
 }
 
-const liTags = () => {
-  let result = '<li>목록</li>';
+const liTags = (children : string) => {
+  let result = `<li>${children}</li>`;
   return result;
 }
 
 root.innerHTML = `
   <ul>
-    <li>${liTags()}</li>
+    <li>${liTags(anchorTags())}</li>
   </ul>
 `;
