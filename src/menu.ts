@@ -1,7 +1,7 @@
 const root = document.getElementById('root')!;
 
-const anchorTags = () : string => {
-  let result = `<a href="#">메뉴</a>`
+const anchorTags = (href : string, textNode : string) : string => {
+  let result = `<a href="${href}">${textNode}</a>`
   return result;
 }
 
@@ -12,6 +12,6 @@ const liTags = (children : string) : string => {
 
 root.innerHTML = `
   <ul>
-    <li>${liTags(anchorTags())}</li>
+    <li>${liTags(anchorTags("#yujin", "유진"))}</li>
   </ul>
 `;
