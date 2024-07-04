@@ -11,17 +11,51 @@ const liTags = (children : string) : string => {
 }
 
 interface BasicData {
-  jaemin : "재민",
-  hoyoung : "호영",
-  yujin : "유진",
-  jiyoon : "지윤"
+  jeamin: {
+    name: '재민',
+    backgroundColor: 'red',
+  },
+  hoyoung: {
+    name: "호영",
+    backgroundColor: "green",
+  },
+  ujin: {
+    name: "유진",
+    backgroundColor: "yellow",
+  
+  },
+  jiyoon: {
+    name: "지윤",
+    backgroundColor: "purple",
+  },
+  ukjae: {
+    name: "욱재",
+    backgroundColor: "blue",
+  }
 }
 
-const basicData : BasicData = {
-  jaemin : "재민",
-  hoyoung : "호영",
-  yujin : "유진",
-  jiyoon : "지윤"
+const basicData:BasicData = {
+  jeamin: {
+    name: '재민',
+    backgroundColor: 'red',
+  },
+  hoyoung: {
+    name: "호영",
+    backgroundColor: "green",
+  },
+  ujin: {
+    name: "유진",
+    backgroundColor: "yellow",
+  
+  },
+  jiyoon: {
+    name: "지윤",
+    backgroundColor: "purple",
+  },
+  ukjae: {
+    name: "욱재",
+    backgroundColor: "blue",
+  }
 }
 
 const totalElement = (obj : BasicData) : string => {
@@ -29,7 +63,7 @@ const totalElement = (obj : BasicData) : string => {
   for (let key in obj) {
     // TypeScript가 key가 BasicData의 키인 것을 알게 함
     const value = obj[key as keyof BasicData];
-    result += liTags(anchorTags(key, value));
+    result += liTags(anchorTags(key, value.name));
   }
   return result;
 }
@@ -51,5 +85,12 @@ console.log(window.location.hash);
 window.addEventListener("hashchange", () => {
   const hash = window.location.hash;
   console.log(hash.slice(1));
-  mainTarget.innerHTML = basicData[hash.slice(1) as keyof BasicData];
+  let test = basicData[hash.slice(1) as keyof BasicData];
+  let div = document.createElement('div');
+  div.style.backgroundColor = test.backgroundColor;
+  div.textContent = test.name;
+  if(mainTarget.hasChildNodes()) {
+    mainTarget.removeChild(mainTarget.childNodes[0]);
+  }
+  mainTarget.appendChild(div);
 })
