@@ -17,6 +17,8 @@
     "@babel/preset-typescript": "^7.24.7",
     "@types/node": "^20.14.9",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }
