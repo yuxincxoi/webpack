@@ -10,6 +10,9 @@
   "description": "",
   "devDependencies": {
     "@babel/cli": "^7.24.7",
-    "@babel/core": "^7.24.7"
+    "@babel/core": "^7.24.7",
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
